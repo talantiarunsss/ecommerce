@@ -43,7 +43,6 @@ export default function Adminscreen() {
                            <li><Link to='/admin/orderslist' style={{color:'black'}}>Orderslist</Link></li>
                        </ul>
 
-
                        <Switch>
                        <Route path='/admin/' component={Userslist} exact />
                           <Route path='/admin/userslist' component={Userslist} />
