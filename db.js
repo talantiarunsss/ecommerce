@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 
-var mongoDBURL = 'mongodb+srv://talantiarun:arunmgDB@cluster0.0gfwmw5.mongodb.net/test'
+// var mongoDBURL = 'mongodb+srv://talantiarun:arunmgDB@cluster0.0gfwmw5.mongodb.net/test'
+
+var mongoDBURL = 'mongodb+srv://test:test123@cluster0.0gfwmw5.mongodb.net/test?retryWrites=true&w=majority'
 
 mongoose.connect(mongoDBURL , {useUnifiedTopology:true , useNewUrlParser:true})
 
