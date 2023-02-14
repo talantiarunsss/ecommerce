@@ -23,7 +23,7 @@ export const placeOrder =(token , subtotal) =>(dispatch , getState)=>{
 
      dispatch({type:'PLACE_ORDER_REQUEST'})
 
-     axios.post('/api/orders/placeorder' , {token , subtotal , currentUser , cartItems}).then(res=>{
+     axios.post('https://e-commerce-6r4a.onrender.com/api/orders/placeorder' , {token , subtotal , currentUser , cartItems}).then(res=>{
 
           dispatch({type:'PLACE_ORDER_SUCCESS'})
           console.log(res);
@@ -42,7 +42,7 @@ export const getOrdersByUserId=()=>(dispatch , getState)=>{
 
       dispatch({type:'GET_ORDERSBYUSERID_REQUEST'})
 
-      axios.post('/api/orders/getordersbyuserid' , {userid:userid}).then(res=>{
+      axios.post('https://e-commerce-6r4a.onrender.com/api/orders/getordersbyuserid' , {userid:userid}).then(res=>{
 
            dispatch({type:'GET_ORDERSBYUSERID_SUCCESS' , payload:res.data})
            console.log(res.data);
@@ -61,7 +61,7 @@ export const getOrderById=(orderid)=>(dispatch , getState)=>{
 
       dispatch({type:'GET_ORDERBYID_REQUEST'})
 
-      axios.post('/api/orders/getorderbyid' , {orderid:orderid}).then(res=>{
+      axios.post('https://e-commerce-6r4a.onrender.com/api/orders/getorderbyid' , {orderid:orderid}).then(res=>{
 
            dispatch({type:'GET_ORDERBYID_SUCCESS' , payload:res.data})
            console.log(res.data);
@@ -80,7 +80,7 @@ export const getAllOrders=()=>(dispatch , getState)=>{
 
      dispatch({type:'GET_ALLORDERS_REQUEST'})
 
-     axios.get('/api/orders/getallorders').then(res=>{
+     axios.get('https://e-commerce-6r4a.onrender.com/api/orders/getallorders').then(res=>{
 
           dispatch({type:'GET_ALLORDERS_SUCCESS' , payload:res.data})
           console.log(res.data);

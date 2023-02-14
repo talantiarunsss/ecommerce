@@ -21,7 +21,7 @@ export default function Homescreen() {
   useEffect(() => {
     dispatch(getAllProducts());
   }, []);
-
+  
   return (
     <div>
       <Filter/>
